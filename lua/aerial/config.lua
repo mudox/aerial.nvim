@@ -4,7 +4,7 @@ local HAS_LSPKIND, lspkind = pcall(require, "lspkind")
 local default_options = {
   -- Priority list of preferred backends for aerial.
   -- This can be a filetype map (see :help aerial-filetype-map)
-  backends = { "treesitter", "lsp", "markdown" },
+  backends = { "treesitter", "lsp", "markdown", "neorg" },
 
   -- Enum: persist, close, auto, global
   --   persist - aerial window will stay open until closed
@@ -222,6 +222,11 @@ local default_options = {
     -- How long to wait (in ms) after a buffer change before updating
     update_delay = 300,
   },
+
+  neorg = {
+    -- How long to wait (in ms) after a buffer change before updating
+    update_delay = 300,
+  },
 }
 
 -- stylua: ignore
@@ -253,37 +258,49 @@ local plain_icons = {
   TypeParameter = "[T]",
   Variable      = "[V]",
   Collapsed     = "▶",
-}
 
--- stylua: ignore
+  Heading1      = "[H1]",
+  Heading2      = "[H2]",
+  Heading3      = "[H3]",
+  Heading4      = "[H4]",
+  Heading5      = "[H5]",
+  Heading6      = "[H6]",
+}
 local nerd_icons = {
-  Class       = " ",
-  Color       = " ",
-  Constant    = " ",
+  Class = " ",
+  Color = " ",
+  Constant = " ",
   Constructor = " ",
-  Enum        = " ",
-  EnumMember  = " ",
-  Event       = " ",
-  Field       = " ",
-  File        = " ",
-  Folder      = " ",
-  Function    = " ",
-  Interface   = " ",
-  Keyword     = " ",
-  Method      = " ",
-  Module      = " ",
-  Operator    = " ",
-  Package     = " ",
-  Property    = " ",
-  Reference   = " ",
-  Snippet     = " ",
-  String      = "s]",
-  Struct      = " ",
-  Text        = " ",
-  Unit        = "塞",
-  Value       = " ",
-  Variable    = " ",
-  Collapsed   = " ",
+  Enum = " ",
+  EnumMember = " ",
+  Event = " ",
+  Field = " ",
+  File = " ",
+  Folder = " ",
+  Function = " ",
+  Interface = " ",
+  Keyword = " ",
+  Method = " ",
+  Module = " ",
+  Operator = " ",
+  Package = " ",
+  Property = " ",
+  Reference = " ",
+  Snippet = " ",
+  String = "s]",
+  Struct = " ",
+  Text = " ",
+  Unit = "塞",
+  Value = " ",
+  Variable = " ",
+  Collapsed = " ",
+
+  Heading1 = "➊",
+  Heading2 = "➋",
+  Heading3 = "➌",
+  Heading4 = "➃",
+  Heading5 = "➄",
+  Heading6 = "➅",
 }
 
 local M = {}

@@ -47,6 +47,7 @@ M._update_symbols = util.throttle(function(backend_name)
   end
 end, {
   delay = function(backend_name)
+    print("delay: " .. backend_name)
     return config[backend_name].update_delay or 300
   end,
   reset_timer_on_call = true,

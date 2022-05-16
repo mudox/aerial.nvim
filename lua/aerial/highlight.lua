@@ -46,6 +46,13 @@ M.create_highlight_groups = function()
     highlight default link AerialTypeParameterIcon Identifier
     highlight default link AerialVariableIcon      Identifier
 
+    highlight default link AerialHeading1Icon      Type
+    highlight default link AerialHeading2Icon      Type
+    highlight default link AerialHeading3Icon      Function
+    highlight default link AerialHeading4Icon      Function
+    highlight default link AerialHeading5Icon      Constant
+    highlight default link AerialHeading6Icon      Constant
+
     " The name of the symbol
     highlight default link AerialArray         NONE
     highlight default link AerialBoolean       NONE
