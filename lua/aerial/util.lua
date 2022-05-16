@@ -315,6 +315,7 @@ M.throttle = function(func, opts)
     local args = M.pack(...)
     local delay = opts.delay
     if type(delay) == "function" then
+      print(vim.inspect(args))
       delay = delay(unpack(args))
     end
     timer = vim.loop.new_timer()
