@@ -4,7 +4,7 @@ local HAS_LSPKIND, lspkind = pcall(require, "lspkind")
 local default_options = {
   -- Priority list of preferred backends for aerial.
   -- This can be a filetype map (see :help aerial-filetype-map)
-  backends = { "treesitter", "lsp", "markdown", "neorg" },
+  backends = { "treesitter", "lsp", "markdown", "neorg", "man" },
 
   -- Enum: persist, close, auto, global
   --   persist - aerial window will stay open until closed
@@ -224,6 +224,11 @@ local default_options = {
   },
 
   neorg = {
+    -- How long to wait (in ms) after a buffer change before updating
+    update_delay = 300,
+  },
+
+  man = {
     -- How long to wait (in ms) after a buffer change before updating
     update_delay = 300,
   },

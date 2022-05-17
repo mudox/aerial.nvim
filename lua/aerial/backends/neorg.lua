@@ -15,6 +15,8 @@ end
 M.fetch_symbols_sync = function(bufnr)
   bufnr = bufnr or 0
   local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, true)
+
+  -- TODO: use neorg toc module API
   -- local last_item = nil
   local items = {}
   local stack = {}
